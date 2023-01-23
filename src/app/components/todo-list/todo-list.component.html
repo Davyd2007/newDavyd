@@ -2,6 +2,8 @@
   {{todo.name}}
   <div *ngIf="todo.completed === true">Задача завершена</div>
   <button *ngIf="todo.completed === false" (click)="complete(todo)">Завершить задачу</button>
+  <button *ngIf="todo.completed === true" (click)="resume(todo)">Возобновить задачу</button>
+  <button (click)="delete(todo)">Удалить</button>
 </div>
 
 

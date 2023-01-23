@@ -16,7 +16,6 @@ export class TodoListComponent {
 
   public inputValue: string = "hello";
 
-  public completed: boolean = false;
 
   public addTodo(inputValue: string) {
     if (!inputValue) {
@@ -35,4 +34,13 @@ export class TodoListComponent {
     todo.completed = true;
     // this.completed = true;
   }
+
+  public resume(todo: TodoList) {
+    todo.completed = false;
+  }
+
+  public delete(todo : todoList) {
+
+  }
+
 }
