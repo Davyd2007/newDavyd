@@ -9,9 +9,18 @@ export class TodoListComponent {
 
   public todoList: string[] = [];
 
-  public inputValue: string = "";
+
+  public inputValue: string = "hello";
+
+  public completed: boolean = false;
 
   public addTodo(inputValue: string) {
     this.todoList.push(inputValue);
+    this.inputValue = "";
+
+  }
+
+  public complete() {
+    this.completed = true;
   }
 }

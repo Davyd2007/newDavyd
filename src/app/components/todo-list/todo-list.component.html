@@ -1,6 +1,9 @@
 <div *ngFor="let todo of todoList">
   {{todo}}
+  <div *ngIf="completed === true">Задача завершена</div>
+  <button *ngIf="completed === false" (click)="complete()">Завершить задачу</button>
 </div>
+
 
 <div class="flex gap" style="padding-top: 22px">
   <input type="text" [(ngModel)]="inputValue">
