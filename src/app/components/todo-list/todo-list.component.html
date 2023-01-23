@@ -1,7 +1,7 @@
 <div *ngFor="let todo of todoList">
-  {{todo}}
-  <div *ngIf="completed === true">Задача завершена</div>
-  <button *ngIf="completed === false" (click)="complete()">Завершить задачу</button>
+  {{todo.name}}
+  <div *ngIf="todo.completed === true">Задача завершена</div>
+  <button *ngIf="todo.completed === false" (click)="complete(todo)">Завершить задачу</button>
 </div>
 
 

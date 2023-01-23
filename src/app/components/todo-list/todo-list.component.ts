@@ -1,5 +1,10 @@
 import { Component } from '@angular/core';
 
+interface TodoList {
+  name: string;
+  completed: boolean;
+}
+
 @Component({
   selector: 'app-todo-list',
   templateUrl: './todo-list.component.html',
@@ -7,20 +12,27 @@ import { Component } from '@angular/core';
 })
 export class TodoListComponent {
 
-  public todoList: string[] = [];
-
+  public todoList: TodoList[] = [];
 
   public inputValue: string = "hello";
 
   public completed: boolean = false;
 
   public addTodo(inputValue: string) {
-    this.todoList.push(inputValue);
+    if (!inputValue) {
+      return;
+    }
+    this.todoList.push({
+      name: inputValue,
+      completed: false
+    });
     this.inputValue = "";
 
   }
 
-  public complete() {
-    this.completed = true;
+  public complete(todo: TodoList) {
+    console.log(todo);
+    todo.completed = true;
+    // this.completed = true;
   }
 }
