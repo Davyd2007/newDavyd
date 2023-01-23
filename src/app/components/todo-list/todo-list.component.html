@@ -1,0 +1,8 @@
+<div *ngFor="let todo of todoList">
+  {{todo}}
+</div>
+
+<div class="flex gap" style="padding-top: 22px">
+  <input type="text" [(ngModel)]="inputValue">
+  <button type="submit" (click)="addTodo(inputValue)">Добавить ТОДО</button>
+</div>
