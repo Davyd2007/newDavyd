@@ -3,6 +3,7 @@ import { Component } from '@angular/core';
 interface TodoList {
   name: string;
   completed: boolean;
+  delete: object;
 }
 
 @Component({
@@ -39,7 +40,7 @@ export class TodoListComponent {
     todo.completed = false;
   }
 
-  public delete(todo : todoList) {
+  public delete(todo: TodoList)  {
 
   }
 
